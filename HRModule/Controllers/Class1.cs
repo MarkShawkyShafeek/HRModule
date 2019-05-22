@@ -12,9 +12,11 @@ namespace HRModule.Controllers
     {
         Attatchment tt = new Attatchment();
         MaritalStatus sds = new MaritalStatus();
+
+        User user = new User();
         void test()
         {
-            
+
         }
     }
 }

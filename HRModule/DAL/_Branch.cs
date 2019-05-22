@@ -39,7 +39,7 @@ using System.Collections.Specialized;
 
 using MyGeneration.dOOdads;
 
-namespace HRModuleEntity
+namespace HRModule
 {
 	public abstract class _Branch : SqlClientEntity
 	{

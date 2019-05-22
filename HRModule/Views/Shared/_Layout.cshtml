@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    
+    @*<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+    @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">*@
+    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/Scripts/modernizr-2.6.2.js"></script>
+
+
+
+    <style type="text/css">
+        .datepicker {
+            font-size: 0.875em;
+        }
+            /* solution 2: the original datepicker use 20px so replace with the following:*/
+
+            .datepicker td, .datepicker th {
+                width: 1.5em;
+                height: 1.5em;
+            }
+
+
+        .btn-toggle {
+            margin: 0 4rem;
+            padding: 0;
+            position: relative;
+            border: none;
+            height: 1.5rem;
+            width: 3rem;
+            border-radius: 1.5rem;
+            color: #6b7381;
+            background: #bdc1c8;
+        }
+
+            .btn-toggle:focus,
+            .btn-toggle.focus,
+            .btn-toggle:focus.active,
+            .btn-toggle.focus.active {
+                outline: none;
+            }
+
+            .btn-toggle:before,
+            .btn-toggle:after {
+                line-height: 1.5rem;
+                width: 4rem;
+                text-align: center;
+                font-weight: 600;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                transition: opacity 0.25s;
+            }
+
+            .btn-toggle:before {
+                content: 'Off';
+                left: -4rem;
+            }
+
+            .btn-toggle:after {
+                content: 'On';
+                right: -4rem;
+                opacity: 0.5;
+            }
+
+            .btn-toggle > .handle {
+                position: absolute;
+                top: 0.1875rem;
+                left: 0.1875rem;
+                width: 1.125rem;
+                height: 1.125rem;
+                border-radius: 1.125rem;
+                background: #fff;
+                transition: left 0.25s;
+            }
+
+            .btn-toggle.active {
+                transition: background-color 0.25s;
+            }
+
+                .btn-toggle.active > .handle {
+                    left: 1.6875rem;
+                    transition: left 0.25s;
+                }
+
+                .btn-toggle.active:before {
+                    opacity: 0.5;
+                }
+
+                .btn-toggle.active:after {
+                    opacity: 1;
+                }
+
+        #bank:before {
+            content: 'bank';
+            left: -4rem;
+        }
+
+        #bank:after {
+            content: '';
+            left: -4rem;
+        }
+
+        #cash:before {
+            content: 'cash';
+            left: -4rem;
+        }
+
+        #cash:after {
+            content: '';
+            left: -4rem;
+        }
+
+        #cheque:before {
+            content: 'cheaque';
+            left: -4rem;
+        }
+
+        #cheque:after {
+            content: '';
+            left: -4rem;
+        }
+
+        .button {
+            margin-left: 150px;
+        }
+
+            .button button {
+                margin-bottom: 15px;
+            }
+    </style>
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Create New Profile</h1>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-personaldata-tab" data-toggle="tab" href="#nav-personaldata" role="tab" aria-controls="nav-personaldata" aria-selected="true">Personal Data and Information</a>
+                <a class="nav-item nav-link" id="nav-jobinfo-tab" data-toggle="tab" href="#nav-jobinfo" role="tab" aria-controls="nav-jobinfo" aria-selected="false">Job Information</a>
+                <a class="nav-item nav-link" id="nav-interviewdetails-tab" data-toggle="tab" href="#nav-interviewdetails" role="tab" aria-controls="nav-interviewdetails" aria-selected="false">Interview Details</a>
+                <a class="nav-item nav-link" id="nav-contract-tab" data-toggle="tab" href="#nav-contract" role="tab" aria-controls="nav-contract" aria-selected="false">Contract Details</a>
+                <a class="nav-item nav-link" id="nav-salary-tab" data-toggle="tab" href="#nav-salary" role="tab" aria-controls="nav-contract" aria-selected="false">Salary Details</a>
+            </div>
+        </nav>
+
+        <div class="container body-content">
+            <div class="tab-content" id="nav-tabContent">
+                @RenderBody()
+            </div>
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </footer>
+           
+      </div>     
+</div>
+        @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>*@
+    <script src="~/Content/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/Scripts/popper.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap.min.js"></script>
+    @*<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>*@
+
+
+
+    <script>
+        $(document).ready(function () {
+            var maxEmailFields = 3;                              //Maximum Emails allowed
+            var emailsWrapper = $("#employeeEmails");           //Email Fields wrapper
+            var addEmailsButton = $("#addEmails");                //Add a new email button ID
+            var numberOfEmailFields = 1;                              //Number of Email Fields
+
+            var maxLandLinesFields = 3;                              //Maximum Land Lines Fields allowed
+            var landLinesWrapper = $("#employeeLandLines");        //Land Lines Fields wrapper
+            var addLandLinesButton = $("#addLandLines");             //Add a new land line ID
+            var numberOfLandLinesFields = 1;                              //Number of Land Lines Fields
+
+            var maxMobileFields = 3;                              //Maximum number of Mobile fields allowed
+            var mobilesWrapper = $("#employeeMobiles");          //Mobile Fields wrapper
+            var addMobilesButton = $("#addMobiles");               //Add a new mobile number button ID
+            var numberOfMobileFields = 1;                              //Number of Mobile fields
+
+
+            $(addEmailsButton).click(function (e) {
+                e.preventDefault();
+                if (numberOfEmailFields < maxEmailFields) {
+                    $(emailsWrapper).append(
+                        '<input type="email" class="form-control mb-2" id="employeeEmail'
+                        + numberOfEmailFields +
+                        '" placeholder="johndoe@examples.com">');
+                    numberOfEmailFields++;
+                }
+            });
+            $(addLandLinesButton).click(function (e) {
+                e.preventDefault();
+                if (numberOfLandLinesFields < maxLandLinesFields) {
+                    $(landLinesWrapper).append('<input type="email" class="form-control mb-2" id="employeeEmail' + numberOfLandLinesFields + '" placeholder="johndoe@examples.com">'); //add input box
+                    numberOfLandLinesFields++;
+                }
+            });
+            $(addMobilesButton).click(function (e) {
+                e.preventDefault();
+                if (numberOfMobileFields < maxMobileFields) {
+                    $(mobilesWrapper).append('<input type="email" class="form-control mb-2" id="employeeEmail' + numberOfMobileFields + '" placeholder="johndoe@examples.com">'); //add input box
+                    numberOfMobileFields++;
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $('#datepicker').datepicker({
+            weekStart: 1,
+            daysOfWeekHighlighted: "6,0",
+            autoclose: true,
+            todayHighlight: true,
+        });
+        $('#datepicker').datepicker("setDate", new Date());
+        //2
+        $('#datepicker2').datepicker({
+            weekStart: 1,
+            daysOfWeekHighlighted: "6,0",
+            autoclose: true,
+            todayHighlight: true,
+        });
+        $('#datepicker2').datepicker("setDate", new Date());
+        //3
+        $('#datepicker3').datepicker({
+            weekStart: 1,
+            daysOfWeekHighlighted: "6,0",
+            autoclose: true,
+            todayHighlight: true,
+        });
+        $('#datepicker3').datepicker("setDate", new Date());
+    </script>
+</body>
+</html>

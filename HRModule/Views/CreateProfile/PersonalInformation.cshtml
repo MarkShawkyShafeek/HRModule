@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "PersonalInformation";
+}
+
+<div class="tab-pane fade show active" id="nav-personaldata" role="tabpanel" aria-labelledby="nav-personaldata-tab">
+    <div class="container">
+        <div class="row justify-content-center pt-3">
+            <div class="col-6 border-right">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Employee Full Name</label>
+                    <input type="text" class="form-control" id="employeeName" placeholder="John">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Gender</label>
+                    <select class="form-control" id="employeeGender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Military Status</label>
+                    <select class="form-control" id="employeeMilitaryStatus">
+                        <option>Active Reserve</option>
+                        <option>Inactive Reserve</option>
+                        <option>No Military Service</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Marital Status</label>
+                    <select class="form-control" id="employeeMartialStatus">
+                        <option>Married</option>
+                        <option>Single</option>
+                    </select>
+                </div>
+                <h3>Contact Details</h3>
+                <div class="form-group" id="employeeEmails">
+                    <div class="d-flex justify-content-between mb-2">
+                        <label for="exampleFormControlInput1">Email</label>
+                        <button type="button" id="addEmails" class="btn btn-primary">Add another email</button>
+                    </div>
+                    <input type="email" class="form-control mb-2" placeholder="johndoe@examples.com">
+                </div>
+                <div class="form-group" id="employeeLandLines">
+                    <div class="d-flex justify-content-between mb-2">
+                        <label for="exampleFormControlInput1">Land Line</label>
+                        <button type="button" id="addLandLines" class="btn btn-primary">Add another Land Line</button>
+                    </div>
+                    <input type="text" class="form-control mb-2" placeholder="johndoe@examples.com">
+                </div>
+                <div class="form-group" id="employeeMobiles">
+                    <div class="d-flex justify-content-between mb-2">
+                        <label for="exampleFormControlInput1">Mobile Number</label>
+                        <button type="button" id="addMobiles" class="btn btn-info">Add another Mobile Number</button>
+                    </div>
+                    <input type="text" class="form-control mb-2" placeholder="johndoe@examples.com">
+                </div>
+            </div>
+            <div class="col-6">
+                <h2>Address Details</h2>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Country</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">City</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Region</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleFormControlInput1">Street</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleFormControlInput1">Building</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleFormControlInput1">Floor Number</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="exampleFormControlTextarea1">Description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="exampleFormControlInput1">Company Email</label>
+                        <input type="text" class="form-control" id="employeeName" placeholder="John">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="exampleFormControlInput1">Company Land Line</label>
+                        <input type="text" class="form-control" id="employeeName" placeholder="John">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="exampleFormControlInput1">Fax</label>
+                        <input type="text" class="form-control" id="employeeName" placeholder="John">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
